@@ -14,8 +14,6 @@ spring:
     generate-ddl: true
     show-sql: true
 
-message: "hello world"
-
 eureka:
   client:
     register-with-eureka: true
