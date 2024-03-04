@@ -14,6 +14,10 @@ spring:
           uri: lb://catalog-service/
           predicates:
             - Path=/catalog/**
+          metadata:
+            ribbon:
+              NIWSServerListClassName: com.netflix.loadbalancer.ConfigurationBasedServerList
+              NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 
 
 eureka:
