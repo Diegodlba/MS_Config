@@ -22,19 +22,19 @@ resilience4j:
   circuitbreaker:
     instances:
       movie-service:
-        sliding-window-type: COUNT_BASED
-        sliding-window-size: 5
-        failure-rate-threshold: 50
-        wait-duration-in-open-state: 15000
-        permitted-number-of-calls-in-half-open-state: 3
-        register-health-indicator: true
-        allow-health-indicator-to-fail: false
-        automatic-transition-from-open-to-half-open-enabled: true
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 15000
+        permittedNumberOfCallsInHalfOpenState: 3
+        registerHealthIndicator: true
+        allowHealthIndicatorToFail: false
+        automaticTransitionFromOpenToHalfOpenEnabled: true
       serie-service:
-        sliding-window-type: TIME_BASED
-        sliding-window-size: 10s
-        failure-rate-threshold: 50
-        wait-duration-in-open-state: 15000
-        register-health-indicator: true
-        allow-health-indicator-to-fail: false
-        automatic-transition-from-open-to-half-open-enabled: true
+        slidingWindowType: TIME_BASED
+        slidingWindowSize: 10s
+        failureRateThreshold: 50
+        waitDurationInOpenState: 15000
+        registerHealthIndicator: true
+        allowHealthIndicatorToFail: false
+        automaticTransitionFromOpenToHalfOpenEnabled: true
