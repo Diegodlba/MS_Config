@@ -32,7 +32,7 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
       serie-service:
         slidingWindowType: TIME_BASED
-        slidingWindowSize: 10s
+        slidingWindowSize: 10000
         failureRateThreshold: 50
         waitDurationInOpenState: 15000
         registerHealthIndicator: true
