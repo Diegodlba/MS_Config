@@ -19,10 +19,16 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
 management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+    health:
+        circuitbreakers:
+            enabled: true
+    endpoint:
+        health:
+            show-details: always
 resilience4j:
   circuitbreaker:
     instances:
