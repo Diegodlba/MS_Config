@@ -4,31 +4,6 @@ server:
 spring:
   application:
     name: catalog-service
-  rabbitmq:
-    listener:
-      simple:
-        default-requeue-rejected: false
-    binding:
-      listener:
-        simple:
-          queues:
-            - name: ${queue.movie.name}
-            - name: ${queue.serie.name}
-    queues:
-      - name: ${queue.movie.name}
-        durable: true
-      - name: ${queue.serie.name}
-        durable: true
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
-queue:
-  movie:
-    name: MovieQueue
-  serie:
-    name: SerieQueue
 
 eureka:
   client:
