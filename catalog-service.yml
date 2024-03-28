@@ -4,6 +4,12 @@ server:
 spring:
   application:
     name: catalog-service
+    
+queue:
+  movie:
+    name: MovieQueue
+  serie:
+    name: SerieQueue
 
 eureka:
   client:
